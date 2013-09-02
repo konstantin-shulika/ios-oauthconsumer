@@ -37,11 +37,11 @@ static NSString *Boundary = @"-----------------------------------0xCoCoaouTHeBou
     NSString *encodedParameters = nil;
     
 	if (![self isMultipart]) {
-		if ([[self HTTPMethod] isEqualToString:@"GET"] || [[self HTTPMethod] isEqualToString:@"DELETE"]) {
+		//if ([[self HTTPMethod] isEqualToString:@"GET"] || [[self HTTPMethod] isEqualToString:@"DELETE"]) {
 			encodedParameters = [[self URL] query];
-		} else {
+		/*} else {
 			encodedParameters = [[[NSString alloc] initWithData:[self HTTPBody] encoding:NSASCIIStringEncoding] autorelease];
-		}
+		}*/
 	}
     
     if (encodedParameters == nil || [encodedParameters isEqualToString:@""]) {
